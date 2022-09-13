@@ -1,6 +1,7 @@
 import resources from "./function.mjs";
 
-const {dayToWeekDay } = resources;
+const {dayToWeekDay,
+        luckyItem } = resources;
 
 const today = new Date();
 
@@ -9,7 +10,8 @@ const today = new Date();
 let outPut = '';
 function outPutString (){
     outPut = outPut + 'It\'s ' + dayToWeekDay(today.getDay())+' today!';
-
+    outPut = outPut +'\n'
+    outPut = outPut + 'Your luckly item today is' + luckyItem() + '!';
     return outPut;
 }
 

@@ -16,10 +16,16 @@ function dayToWeekDay(dayNum){
     }
 }
 
-
+function luckyItem(){
+    const item = ['apple','mirror','eraser','watch','egg','chessman','mug'];
+    const randomItemNum = Math.floor((Math.random())*(item.length));
+    return item[randomItemNum];
+}
 
 const resources = {
     dayToWeekDay,
+    luckyItem,
+
 }
 
 export default resources;
