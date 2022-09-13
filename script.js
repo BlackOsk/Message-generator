@@ -1,4 +1,4 @@
-import resources from "./function.mjs";
+import resources from "./function.js";
 
 const {dayToWeekDay,
         luckyItem,
@@ -12,14 +12,26 @@ const today = new Date();
 let outPut = '';
 function outPutString (){
     outPut = outPut + 'It\'s ' + dayToWeekDay(today.getDay())+' today!';
-    outPut = outPut +'\n';
+    outPut = outPut +'<br>';
     outPut = outPut + 'Your luckly item today is ' + luckyItem() + '!';
-    outPut = outPut +'\n';
+    outPut = outPut +'<br>';
     const lucklyNum = luckyNumber()
     outPut = outPut + 'Your luckly number today is ' + lucklyNum +', pay attention to thous things appear in your life by '+ lucklyNum + '!';
-    outPut = outPut +'\n';
+    outPut = outPut +'<br>';
     outPut = outPut + goodSayings();
     return outPut;
 }
 
-console.log (outPutString());
+let htmlDisplay = document.getElementById('display');
+let button = document.getElementById('button')
+/* button.addEventListener('click',(){
+    htmlDisplay.innerHTML = 'The string';
+}); */
+let clickNum = 0;
+button.addEventListener('click', ()=>{
+    if(clickNum === 0){
+        htmlDisplay.innerHTML = outPutString();
+        clickNum++;
+    }
+})
+
