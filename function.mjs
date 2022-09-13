@@ -26,11 +26,20 @@ function luckyNumber(){
     return Math.floor((Math.random())*9);
 }
 
+function goodSayings(){
+    const sayings = ['Everybody arounds you loves you! So do your best to love them back!',
+                      'Eat something you like and share it with your friends!',
+                      'Try to do a little thing that you have been wanting to do!',
+                      'Have a good day!'];
+    const randomItemNum = Math.floor((Math.random())*(sayings.length));
+    return sayings[randomItemNum];
+}
+
 const resources = {
     dayToWeekDay,
     luckyItem,
     luckyNumber,
-
+    goodSayings,
 }
 
 export default resources;
