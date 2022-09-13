@@ -22,9 +22,14 @@ function luckyItem(){
     return item[randomItemNum];
 }
 
+function luckyNumber(){
+    return Math.floor((Math.random())*9);
+}
+
 const resources = {
     dayToWeekDay,
     luckyItem,
+    luckyNumber,
 
 }
 
